@@ -33,16 +33,20 @@ La valeur `TimeoutInterval` permet de définir a partir de combien de temps une 
 ### TeamWritter
 
 La valeur `OutputDirectory` indique dans quel dossier les fichiers de sortie seront créés. Attention, ce dossier est automatiquement vidé au lancement de l'application.
+
 La valeur `TotalViewersFile` indique comment sera nommé le fichier contenant le nombre total de viewers. Si omis le fichier ne sera pas créé.
+
 La valeur `LiveChannelCountFile` indique comment sera nommé le fichier contenant le nombre de channels supervisés. Si omis le fichier ne sera pas créé.
+
 La valeur `LiveChannelTotalFile` indique comment sera nommé le fichier contenant le nombre de channels actuellement en live. Si omis le fichier ne sera pas créé.
+
 La valeur `IndividualChannelFileFormat` indique comment seront formatés les fichiers créés pour le total de viewers de chaques chaines. Si omis le fichier ne sera pas créé.
 
 ## Exemple
 
 Je veux suivre les chaînes de Ultia, Ponce et AntoineDaniel.
 
-Il faut que je mette les valeurs suivantes dans le tableau `ChannelIds` de mon fichier `appsettings.json` :
+Il faut que je mette les valeurs suivantes dans le tableau `ChannelIds` de mon fichier `appsettings.json`, ces valeur ont été récupérées sur le site internet [streamweasels.com](https://www.streamweasels.com/tools/convert-twitch-username-to-user-id/) :
 
      "ChannelIds": [ "68594999", "50597026", "135468063" ],
 
@@ -55,8 +59,8 @@ Une fois l'application lancée, mon dossier contiendra les fichiers suivants :
         +-- total.channels          // Nombre de channels monitorés (3 dans notre cas)
         +-- live.channels           // Nombre de channels actuellement en live
         +-- total.viewers           // Nombre de viewers total pour les 3 channels
-        +-- 68594999.viewers           // Nombre de viewers actuel pour Ponce
-        +-- total.viewers           // Nombre de viewers actuel pour Ponce
-        +-- total.viewers           // Nombre de viewers actuel pour Ponce
+        +-- 68594999.viewers        // Nombre de viewers actuel pour Ultia
+        +-- 50597026.viewers        // Nombre de viewers actuel pour Ponce
+        +-- 135468063.viewers       // Nombre de viewers actuel pour AntoineDaniel
 
 Ceux-ci seront mis à jour en temps réel et peuvent être utilisés pour créer une source Texte (GDI+).
