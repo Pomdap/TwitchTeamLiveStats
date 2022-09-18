@@ -63,4 +63,4 @@ Une fois l'application lancée, mon dossier contiendra les fichiers suivants :
         +-- 50597026.viewers        // Nombre de viewers actuel pour Ponce
         +-- 135468063.viewers       // Nombre de viewers actuel pour AntoineDaniel
 
-Ceux-ci seront mis à jour en temps réel et peuvent être utilisés pour créer une source Texte (GDI+).
+Ceux-ci seront mis à jour en temps réel et peuvent être utilisés pour créer une source Texte (GDI+) sur OBS.
