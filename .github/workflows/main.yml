@@ -25,7 +25,8 @@ jobs:
       - name: Publish
         run: dotnet publish --configuration Release
       - name: Zip
-        run: 7z a TwitchTeamLiveStats.zip bin/Release/netcoreapp3.1/win-x64/publish/TwitchTeamLiveStats.exe bin/Release/netcoreapp3.1/win-x64/publish/appsettings.json
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: 7z a TwitchTeamLiveStats.zip ./bin/Release/netcoreapp3.1/win-x64/publish/*
       - name: Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v1
