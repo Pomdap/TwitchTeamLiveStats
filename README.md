@@ -4,7 +4,7 @@ Il s'agit d'une application console qui utilise l'api [PubSub de Twitch](https:/
 
 Elle peut-être utilisé pour avoir un compteur commun lors d'un évennement ou pour votre collectif Twitch.
 
-Vous pouvez télécharger la dernière version [directement ici](/releases/latest/download/TwitchTeamLiveStats.zip), ou sur la page des [releases](/releases).
+Vous pouvez télécharger la dernière version [directement ici](../../releases/latest/download/TwitchTeamLiveStats.zip), ou sur la page des [releases](../../releases).
 
 ## Configuration de l'application
 
