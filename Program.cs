@@ -307,7 +307,7 @@ public class Program
     public static void Main(string[] args)
     {
         var config = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json", optional: false)
+            .AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "./appsettings.json"), optional: false)
             .Build();
 
         var serviceProvider = new ServiceCollection()
